@@ -1,0 +1,39 @@
+{
+  "name": "react-library",
+  "version": "0.0.1",
+  "description": "Library for Stencil React component",
+  "keywords": [
+    "stencil",
+    "react"
+  ],
+  "author": "John Yunker <john.yunker@hpe.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node ./__tests__/react-library.test.js",
+    "clean": "rimraf ./dist ./node_modules ./lib/components",
+    "build": "npm run tsc",
+    "tsc": "tsc -p . --outDir ./dist"
+  },
+  "dependencies": {
+    "@stencil/react-output-target": "^0.7.1",
+    "stencil-library": "*"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
+}
